@@ -30,5 +30,4 @@ func main() {
 	}
 	p1.SetName("王五")
 	p1.PrintInfo() // main.Person{name:"王五", age:11, sex:"女", height:0}
-
 }
