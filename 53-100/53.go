@@ -4,8 +4,8 @@ import "fmt"
 
 // 接口
 type Usb interface {
-	start()
-	stop()
+	Start()
+	Stop()
 }
 
 // 如果接口里面有方法的话，必须要通过结构体或者通过自定义类型实现这个接口
@@ -14,11 +14,11 @@ type Phone struct {
 }
 
 // Phone 结构体要实现 Usb 接口的话，必须得实现 Usb 接口中的所有方法
-func (thisPhone Phone) start() {
-	fmt.Printf("start %v\n", thisPhone.Name)
+func (thisPhone Phone) Start() {
+	fmt.Printf("Start %v\n", thisPhone.Name)
 }
-func (thisPhone Phone) stop() {
-	fmt.Printf("stop %v\n", thisPhone.Name)
+func (thisPhone Phone) Stop() {
+	fmt.Printf("Stop %v\n", thisPhone.Name)
 }
 
 func main() {
@@ -27,6 +27,6 @@ func main() {
 	var p1 Usb = Phone{
 		Name: "华为手机",
 	}
-	p1.start()
-	p1.stop()
+	p1.Start()
+	p1.Stop()
 }
